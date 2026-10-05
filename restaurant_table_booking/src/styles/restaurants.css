@@ -1,0 +1,43 @@
+.restaurants-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.search-wrapper {
+  margin-bottom: 2rem;
+}
+
+.results-info {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.results-info strong {
+  color: var(--dark);
+}
+
+.no-results {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.no-results i {
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.no-results h2 {
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: var(--gray);
+}

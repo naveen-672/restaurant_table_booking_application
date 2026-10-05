@@ -1,0 +1,189 @@
+.booking-page {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.restaurant-summary {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  position: sticky;
+  top: 100px;
+}
+
+.restaurant-summary img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.summary-info {
+  padding: 1.8rem;
+}
+
+.summary-info h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.summary-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.reviews {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.summary-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: 1.2rem 0;
+  padding: 1.2rem 0;
+  border-top: 1px dashed var(--border);
+  border-bottom: 1px dashed var(--border);
+}
+
+.summary-details > div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.summary-details i {
+  color: var(--primary);
+  width: 18px;
+}
+
+.booking-main {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
+
+.booking-main h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.booking-main h2 i {
+  color: var(--primary);
+}
+
+.booking-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.slot-option {
+  cursor: pointer;
+  position: relative;
+}
+
+.slot-option input {
+  position: absolute;
+  opacity: 0;
+}
+
+.slot-option {
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: var(--light);
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.slot-option i {
+  color: var(--primary);
+}
+
+.slot-option:hover {
+  border-color: var(--primary);
+}
+
+.slot-option.active {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(255, 87, 34, 0.1), rgba(255, 152, 0, 0.1));
+  box-shadow: 0 0 0 4px rgba(255, 87, 34, 0.1);
+  color: var(--primary-dark);
+}
+
+.confirm-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  font-family: inherit;
+}
+
+.confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255, 87, 34, 0.4);
+}
+
+@media (max-width: 900px) {
+  .booking-container {
+    grid-template-columns: 1fr;
+  }
+  .restaurant-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .booking-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
